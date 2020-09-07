@@ -1,0 +1,28 @@
+{
+  "name": "strapi-plugin-route-reflector",
+  "version": "0.0.0",
+  "description": "This is the description of the plugin.",
+  "strapi": {
+    "name": "route-reflector",
+    "icon": "plug",
+    "description": "Description of route-reflector plugin."
+  },
+  "dependencies": {},
+  "author": {
+    "name": "A Strapi developer",
+    "email": "",
+    "url": ""
+  },
+  "maintainers": [
+    {
+      "name": "A Strapi developer",
+      "email": "",
+      "url": ""
+    }
+  ],
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
