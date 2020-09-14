@@ -13,7 +13,8 @@ module.exports = async () => {
 
 
   // clean every permission who doesn't have role (it prevents bootstrap errors)
-  await strapi.query('permission', 'users-permissions').delete({ role: null });
+  await strapi.query('permission', 'users-permissions').delete({ role: { $exists: false } });
+
 
   // variable to hold all configurated permissions
   let configuredHandlers = [];
