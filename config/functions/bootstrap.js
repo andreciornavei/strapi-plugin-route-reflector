@@ -11,6 +11,10 @@ module.exports = async () => {
   // 3 - Create a new route permission if it's present on routes.json but not on database.               //
   // *************************************************************************************************** //
 
+
+  // clean every permission who doesn't have role (it prevents bootstrap errors)
+  await strapi.query('permission', 'users-permissions').delete({ role: null });
+
   // variable to hold all configurated permissions
   let configuredHandlers = [];
   const authenticated = await strapi.query('role', 'users-permissions').findOne({ type: 'authenticated' });
